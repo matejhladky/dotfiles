@@ -1,0 +1,49 @@
+Config {
+        -- Appearance
+          font          = "DejaVu Mono Sans 10"
+        , dpi           = 192
+        , bgColor       = "#2E3440"
+        , fgColor       = "#D8DEE9"
+        , border        = TopB
+        , borderColor   = "#646464"
+        , position      = TopSize L 100 64
+
+        -- Plugins
+        , commands =
+            [ Run MultiCpu   [ "--template"  , "cpu: [ <total>% ]"
+                            , "--Low"       , "50"
+                            , "--High"      , "85"
+                            , "--low"       , "#A3BE8C"
+                            , "--normal"    , "#EBCB8B"
+                            , "--high"      , "#BF616A"
+                            ] 10
+            , Run CoreTemp  [ "--template"  , "temp: [ <core0>°C  <core1>°C  <core2>°C  <core3>°C ]"
+                            , "--Low"       , "70"
+                            , "--High"      , "80"
+                            , "--low"       , "#A3BE8C"
+                            , "--normal"    , "#EBCB8B"
+                            , "--high"      , "#BF616A"
+                            ] 50
+            , Run Memory  [ "--template"  , "mem: [ <usedratio>% ]"
+                            , "--Low"       , "20"
+                            , "--High"      , "90"
+                            , "--low"       , "#A3BE8C"
+                            , "--normal"    , "#EBCB8B"
+                            , "--high"      , "#BF616A"
+                            ] 10
+            , Run Battery  [ "--template"  , "batt: [ <acstatus> ]"
+                            , "--Low"       , "10"
+                            , "--High"      , "80"
+                            , "--low"       , "#BF616A"
+                            , "--normal"    , "#EBCB8B"
+                            , "--high"      , "#A3BE8C"
+                            , "--"
+                                    , "-o"  , "<left>% (<timeleft>)"
+                                    , "-O"  , "<fc=#dAA520>Charging</fc>"
+                                    , "-i"  , "<fc=#006000>Charged</fc>"
+                            ] 50
+            , Run Date      "<fc=#D8DEE9>%F (%a) %T</fc>" "date" 10
+            , Run StdinReader
+            ]
+        , template = "   %StdinReader% }{ %battery%   %multicpu%   %coretemp%   %memory%   %date%   "
+        }
