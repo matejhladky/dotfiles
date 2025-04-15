@@ -118,8 +118,16 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 
 
 alias ls='ls --color=auto'
-alias sudo="sudo "
 alias vi='nvim'
+
+cd() {
+  if [ "$1" = "notes" ]; then
+    builtin cd ~/Documents/vaults/digital-garden
+  else
+    builtin cd "$@"
+  fi
+}
+
 
 c_cyan='\e[0;96m'
 c_reset='\e[0m'
@@ -129,3 +137,12 @@ set -o vi
 
 export EDITOR='nvim'
 . "$HOME/.cargo/env"
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+
+# Entry point for Depthai demo app, enables to run <depthai_launcher> in terminal
+export PATH=$PATH:/home/mateo/Dev/repos//depthai/entrypoint
+
+export QT_SCALE_FACTOR=2
+# export GDK_SCALE=2
+# export GDK_DPI_SCALE=0.5
+

@@ -1,0 +1,75 @@
+[colors.primary]
+# background = "#282a33" # BackgroundNormal from Colors:Button
+background = "#18191f"
+foreground = "#e0e5eb" # ForegroundNormal from Colors:Button
+
+[colors.cursor]
+text = "#282a33" # Same as background
+cursor = "#61aeee" # ForegroundActive from Colors:Button
+
+[colors.vi_mode_cursor]
+text = "#282a33" # Same as background
+cursor = "#5293c8" # DecorationFocus from Colors:Button
+
+[colors.search.matches]
+foreground = "#282a33" # Same as background
+background = "#c8a76a" # ForegroundNeutral from Colors:Button
+
+[colors.search.focused_match]
+foreground = "#282a33" # Same as background
+background = "#a6d189" # ForegroundPositive from Colors:Button
+
+[colors.footer_bar]
+foreground = "#282a33" # Same as background
+background = "#5293c8" # DecorationFocus from Colors:Button
+
+[colors.hints.start]
+foreground = "#282a33" # Same as background
+background = "#e4c079" # ForegroundNeutral from Colors:Button
+
+[colors.hints.end]
+foreground = "#282a33" # Same as background
+background = "#5293c8" # DecorationFocus from Colors:Button
+
+[colors.selection]
+text = "#282a33" # Same as background
+background = "#fcfcfc" # ForegroundActive from Colors:Button
+
+[colors.normal]
+black = "#272b32" # BackgroundAlternate from Colors:Button
+red = "#d24453" # ForegroundNegative from Colors:Button
+green = "#27ae60" # ForegroundPositive from Colors:Button
+yellow = "#f67400" # ForegroundNeutral from Colors:Button
+blue = "#2980b9" # ForegroundLink from Colors:Button
+magenta = "#5293c8" # DecorationFocus from Colors:Button
+cyan = "#61aeee" # ForegroundActive from Colors:Button
+white = "#e0e5eb" # ForegroundNormal from Colors:Button
+
+[colors.bright]
+black = "#626880" # BackgroundAlternate from Colors:View
+red = "#d24453" # ForegroundNegative from Colors:Button
+green = "#27ae60" # ForegroundPositive from Colors:Button
+yellow = "#f67400" # ForegroundNeutral from Colors:Button
+blue = "#2980b9" # ForegroundLink from Colors:Button
+magenta = "#5293c8" # DecorationFocus from Colors:Button
+cyan = "#61aeee" # ForegroundActive from Colors:Button
+white = "#ffffff" # Adjusted to bright white
+
+[colors.dim]
+black = "#51576d" # BackgroundNormal from Colors:View
+red = "#fa7882" # ForegroundNegative from Colors:Inactive
+green = "#addc88" # ForegroundPositive from Colors:Inactive
+yellow = "#fad184" # ForegroundNeutral from Colors:Inactive
+blue = "#67b8fa" # ForegroundLink from Colors:Inactive
+magenta = "#df87fa" # DecorationFocus from Colors:Inactive
+cyan = "#65d9e6" # ForegroundActive from Colors:Inactive
+white = "#63686d" # ForegroundInactive from Colors:Inactive
+
+[[colors.indexed_colors]]
+index = 16
+color = "#ef9f76"
+
+[[colors.indexed_colors]]
+index = 17
+color = "#f2d5cf"
+

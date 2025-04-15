@@ -1,13 +1,24 @@
+general.import = [
+  # "~/.config/alacritty/themes/catppuccin-latte.toml"
+  # "~/.config/alacritty/themes/catppuccin-frappe.toml"
+  # "~/.config/alacritty/themes/catppuccin-macchiato.toml"
+  # "~/.config/alacritty/themes/catppuccin-mocha.toml"
+  # "~/.config/alacritty/qogir-dark.toml"
+]
+
 [window]
-dimensions.columns = 100
-dimensions.lines = 32
-opacity = 0.95
+dimensions.columns = 90
+dimensions.lines = 28
+opacity = 0.85
 padding.x = 10
 padding.y = 10
+# dpi.x = 96
+# dpi.y = 96
 
 [font]
-size = 11
+size = 10
 normal.family = "DejaVu Sans Mono"
 
 [env]
 TERM = "xterm-256color"
+WINIT_X11_SCALE_FACTOR = "2"
