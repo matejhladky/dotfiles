@@ -4,7 +4,12 @@ set -o vi
 
 
 # Prompt
-PS1="\[\\033[38;5;153m\]mateo@debian: \w \]\\033[0m\]"
+PS1="\[\033[38;5;153m\]mateo@debian: \w\[\033[0m\] "
+
+
+# Aliases
+alias vi='nvim'
+alias vim='nvim'
 
 
 # Eternal bash history.
