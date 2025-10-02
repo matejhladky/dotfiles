@@ -10,6 +10,7 @@ PS1="\[\033[38;5;153m\]mateo@debian: \w\[\033[0m\] "
 # Aliases
 alias vi='nvim'
 alias vim='nvim'
+alias copy='xclip -selection clipboard'
 
 
 # Eternal bash history.
