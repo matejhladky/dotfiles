@@ -1,0 +1,14 @@
+local o = vim.opt
+o.number = true
+o.clipboard = 'unnamedplus'
+o.relativenumber = true
+o.termguicolors = true
+o.ignorecase = true
+o.smartcase = true
+o.signcolumn = 'yes'
+o.updatetime = 200
+o.expandtab = true
+o.shiftwidth = 2
+o.tabstop = 2
+o.scrolloff = 6
+o.sidescrolloff = 6
