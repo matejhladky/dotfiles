@@ -1,2 +1,9 @@
-.config/alacritty/local.toml
 .bashrc.local
+
+.config/alacritty/local.toml
+
+local.lua
+local/*.lua
+local.plugins.lua
+lazy-lock.json
+
