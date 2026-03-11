@@ -10,6 +10,7 @@ dimensions.columns = 86
 dimensions.lines = 28
 padding.x = 10
 padding.y = 10
+# opacity = 0.95
 opacity = 1.0
 
 [font]
@@ -19,3 +20,4 @@ normal.family = "Classic Console Neue"
 [cursor]
 style.shape = "Beam"
 style.blinking = "On"
+
