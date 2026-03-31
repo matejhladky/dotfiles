@@ -13,8 +13,23 @@ padding.y = 10
 opacity = 1.0
 
 [font]
-size = 14.0
-normal.family = "Classic Console Neue"
+size = 12.0
+
+[font.normal]
+family = "Ioskeley Mono"
+style = "Regular"
+
+[font.bold]
+family = "Ioskeley Mono"
+style = "Bold"
+
+[font.italic]
+family = "Ioskeley Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "Ioskeley Mono"
+style = "Bold Italic"
 
 [cursor]
 style.shape = "Beam"
