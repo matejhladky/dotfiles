@@ -1,6 +1,4 @@
-# per-machines overrides
-# put tweaks in ~/.config/alacritty/local.toml
-general.import = ["~/.config/alacritty/local.toml"]
+# per-machines overrides: put tweaks in ~/.config/alacritty/local.toml
 
 [env]
 TERM = "xterm-256color"

@@ -1,6 +1,6 @@
 local map, opts = vim.keymap.set, { noremap = true, silent = true }
 
--- open file exlorer
+-- open file explorer
 map('n', '<leader>e', '<cmd>Ex<cr>', opts)
 
 -- copying to nvim & system buffer
@@ -29,4 +29,9 @@ map("i", "<Up>", "<nop>")
 map("n", "<Down>", "<nop>")
 map("v", "<Down>", "<nop>")
 map("i", "<Down>", "<nop>")
+
+-- telescope
+map("n", "<leader>ff", function() require("telescope.builtin").find_files() end, opts)
+map("n", "<leader>fg", function() require("telescope.builtin").live_grep() end, opts)
+map("n", "<leader>fb", function() require("telescope.builtin").buffers() end, opts)
 
