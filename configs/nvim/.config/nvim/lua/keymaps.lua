@@ -35,3 +35,5 @@ map("n", "<leader>ff", function() require("telescope.builtin").find_files() end,
 map("n", "<leader>fg", function() require("telescope.builtin").live_grep() end, opts)
 map("n", "<leader>fb", function() require("telescope.builtin").buffers() end, opts)
 
+-- zen mode
+map("n", "<leader>z", "<cmd>ZenMode<cr>", opts)

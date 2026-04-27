@@ -35,4 +35,21 @@ return {
       })
     end,
   },
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      window = {
+        width = 110,
+        height = 1,
+      },
+      plugins = {
+        options = {
+          enabled = true,
+          ruler = false,
+          showcmd = false,
+          laststatus = 0,
+        },
+      },
+    },
+  },
 }
