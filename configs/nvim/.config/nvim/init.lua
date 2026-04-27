@@ -14,9 +14,17 @@ local highlights = {
     "WinSeparator",
 }
 
-for _, hl in ipairs(highlights) do
+local function apply_transparent_backgrounds()
+  for _, hl in ipairs(highlights) do
     vim.api.nvim_set_hl(0, hl, { bg = "none" })
+  end
 end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = apply_transparent_backgrounds,
+})
+
+apply_transparent_backgrounds()
 
 -- setup lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -48,4 +56,3 @@ local local_cfg = vim.fn.stdpath('config') .. '/local.lua'
 if vim.fn.filereadable(local_cfg) == 1 then
   dofile(local_cfg)
 end
-

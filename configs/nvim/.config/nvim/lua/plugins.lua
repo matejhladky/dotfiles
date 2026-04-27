@@ -1,9 +1,15 @@
 return {
   {
-    "silentium-theme/silentium.nvim",
+    "Mofiqul/vscode.nvim",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("silentium")
+      require("vscode").setup({
+        style = "dark",
+        transparent = true,
+        italic_comments = true,
+        disable_nvimtree_bg = true,
+      })
+      vim.cmd.colorscheme("vscode")
     end,
   },
   {
