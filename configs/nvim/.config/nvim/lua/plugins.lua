@@ -1,15 +1,13 @@
+local parser_install_dir = vim.fn.stdpath("data") .. "/treesitter"
+
+vim.opt.runtimepath:prepend(parser_install_dir)
+
 return {
   {
-    "Mofiqul/vscode.nvim",
+    "silentium-theme/silentium.nvim",
     priority = 1000,
     config = function()
-      require("vscode").setup({
-        style = "dark",
-        transparent = true,
-        italic_comments = true,
-        disable_nvimtree_bg = true,
-      })
-      vim.cmd.colorscheme("vscode")
+      vim.cmd.colorscheme("silentium")
     end,
   },
   {
@@ -29,27 +27,22 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "lua", "vim", "vimdoc", "query", "python", "vue", "typescript", "javascript", "html", "css" },
+        parser_install_dir = parser_install_dir,
+        ensure_installed = {
+          "lua",
+          "vim",
+          "vimdoc",
+          "query",
+          "python",
+          "vue",
+          "typescript",
+          "javascript",
+          "html",
+          "css",
+        },
         highlight = { enable = true },
         indent = { enable = true },
       })
     end,
-  },
-  {
-    "folke/zen-mode.nvim",
-    opts = {
-      window = {
-        width = 110,
-        height = 1,
-      },
-      plugins = {
-        options = {
-          enabled = true,
-          ruler = false,
-          showcmd = false,
-          laststatus = 0,
-        },
-      },
-    },
   },
 }

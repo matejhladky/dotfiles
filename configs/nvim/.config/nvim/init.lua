@@ -4,27 +4,7 @@ vim.g.maplocalleader = ' '
 -- core modules
 require('opts')
 require('keymaps')
-
--- ensure neovim doesn't override transparency
-local highlights = {
-    "Normal", "NormalNC", "NormalFloat",
-    "SignColumn", "FoldColumn",
-    "LineNr", "CursorLineNr",
-    "StatusLine", "StatusLineNC",
-    "WinSeparator",
-}
-
-local function apply_transparent_backgrounds()
-  for _, hl in ipairs(highlights) do
-    vim.api.nvim_set_hl(0, hl, { bg = "none" })
-  end
-end
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-  callback = apply_transparent_backgrounds,
-})
-
-apply_transparent_backgrounds()
+require('autocmds')
 
 -- setup lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
