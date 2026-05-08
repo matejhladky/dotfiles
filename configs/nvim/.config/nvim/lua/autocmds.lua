@@ -20,5 +20,3 @@ end
 vim.api.nvim_create_autocmd("ColorScheme", {
   callback = apply_transparent_backgrounds,
 })
-
-apply_transparent_backgrounds()

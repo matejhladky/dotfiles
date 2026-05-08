@@ -17,18 +17,9 @@ map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 
 -- disable arrows
-map("n", "<Left>", "<nop>")
-map("v", "<Left>", "<nop>")
-map("i", "<Left>", "<nop>")
-map("n", "<Right>", "<nop>")
-map("v", "<Right>", "<nop>")
-map("i", "<Right>", "<nop>")
-map("n", "<Up>", "<nop>")
-map("v", "<Up>", "<nop>")
-map("i", "<Up>", "<nop>")
-map("n", "<Down>", "<nop>")
-map("v", "<Down>", "<nop>")
-map("i", "<Down>", "<nop>")
+for _, key in ipairs({ "<Left>", "<Right>", "<Up>", "<Down>" }) do
+  map({ "n", "v", "i" }, key, "<nop>")
+end
 
 -- telescope
 map("n", "<leader>ff", function() require("telescope.builtin").find_files() end, opts)

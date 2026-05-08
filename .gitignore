@@ -6,6 +6,7 @@ local.lua
 local/*.lua
 local.plugins.lua
 lazy-lock.json
+.nvimlog
 
 fonts/
 
