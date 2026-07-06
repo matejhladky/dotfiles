@@ -12,3 +12,5 @@ o.shiftwidth = 2
 o.tabstop = 2
 o.scrolloff = 6
 o.sidescrolloff = 6
+o.splitright = true
+o.splitbelow = true

@@ -19,13 +19,11 @@ return {
     })
 
     -- diagnostic navigation (global, not buffer-local)
-    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { silent = true, desc = "prev diagnostic" })
-    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { silent = true, desc = "next diagnostic" })
+    vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, { silent = true, desc = "prev diagnostic" })
+    vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, { silent = true, desc = "next diagnostic" })
 
     -- servers
-    local lspconfig = require("lspconfig")
-
-    lspconfig.lua_ls.setup({
+    vim.lsp.config("lua_ls", {
       settings = {
         Lua = {
           runtime = { version = "LuaJIT" },
@@ -41,14 +39,16 @@ return {
       },
     })
 
-    lspconfig.basedpyright.setup({
+    vim.lsp.config("basedpyright", {
       settings = {
         basedpyright = {
           analysis = {
-            typeCheckingMode = "standard",
+            typeCheckingMode = "off",
           },
         },
       },
     })
+
+    vim.lsp.enable({ "lua_ls", "basedpyright" })
   end,
 }

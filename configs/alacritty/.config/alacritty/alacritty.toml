@@ -32,3 +32,8 @@ style = "Bold Italic"
 [cursor]
 style.shape = "Beam"
 style.blinking = "On"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
