@@ -4,7 +4,7 @@ set -o vi
 
 
 # prompt
-PS1="\[\033[38;5;153m\]mateo@debian: \w\[\033[0m\] "
+PS1="\[\033[38;5;153m\]\w\[\033[0m\] ❯ "
 
 
 # aliases

@@ -5,7 +5,7 @@ REPO_DIR="${REPO_DIR:-$HOME/.dotfiles}"
 TARGET="${TARGET:-$HOME}"
 PACKAGES="${*:-}"
 
-DEFAULTS=(alacritty bash nvim)
+DEFAULTS=(alacritty bash nvim tmux)
 
 command -v stow >/dev/null || {
     echo "Error: stow not installed"
